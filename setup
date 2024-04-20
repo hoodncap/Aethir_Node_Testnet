@@ -5,10 +5,8 @@ wget https://aethir-checker-client.s3.ap-southeast-1.amazonaws.com/eu/AethirChec
 tar -xf AethirCheckerClient-linux-cli-installer.tar
 
 # 3. Çıkarılan klasöre gidin.
-cd AethirCheckerClient-linux-cli-installer
+cd AethirCheckerCLI-linux-1.0.1.5-eu
 
-# 4. Kurulum betiğini çalıştırın.
-./install.sh
 
 aethir wallet create
 Give the public key to the License Owner
