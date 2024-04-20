@@ -1,0 +1,25 @@
+# 1. Tar dosyasını indirin.
+wget https://aethir-checker-client.s3.ap-southeast-1.amazonaws.com/eu/AethirCheckerClient-linux-cli-installer.tar
+
+# 2. Tar dosyasını çıkarın.
+tar -xf AethirCheckerClient-linux-cli-installer.tar
+
+# 3. Çıkarılan klasöre gidin.
+cd AethirCheckerClient-linux-cli-installer
+
+# 4. Kurulum betiğini çalıştırın.
+./install.sh
+
+aethir wallet create
+Give the public key to the License Owner
+Once Owner initiated the delegation process, check the list of pending licenses
+aethir license list --pending
+Get the license IDs, and approve:
+aethir license approve [License ID]
+If you’d like to approve all pending licenses, use:
+aethir license approve --all
+Checker nodes are running automatically. You can verify by using:
+aethir license list --working
+or
+
+aethir license summary
