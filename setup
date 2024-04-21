@@ -1,23 +1,40 @@
-# 1. Tar dosyasını indirin.
-wget https://aethir-checker-client.s3.ap-southeast-1.amazonaws.com/eu/AethirCheckerClient-linux-cli-installer.tar
+wget https://aethir-checker-client.s3.ap-southeast-1.amazonaws.com/sg/AethirCheckerClient-linux-cli-installer.tar
 
-# 2. Tar dosyasını çıkarın.
-tar -xf AethirCheckerClient-linux-cli-installer.tar
+tar -xvf AethirCheckerClient-linux-cli-installer.tar
 
-# 3. Çıkarılan klasöre gidin.
-cd AethirCheckerCLI-linux-1.0.1.5-eu
+sudo apt update
+sudo apt install screen
 
+screen -S Aethir
+
+cd AethirCheckerCLI-linux-1.0.1.5-sg
+
+./AethirChecker-1.0.1.5
+
+Y'yi girin
 
 aethir wallet create
-Give the public key to the License Owner
-Once Owner initiated the delegation process, check the list of pending licenses
+
+// Mevcut özel anahtarınızı ve mevcut genel anahtarınızı kontrol edin ve bunları güvenli bir yere girin.
+
+Geçerli genel anahtarınızı app.aethir.com/licences tabındaki nftnizin sağındaki bulunan adres alanına girin ve Delege'ye basın.
+
+Terminale dönün ve aşağıdakini yazın
+
 aethir license list --pending
-Get the license IDs, and approve:
-aethir license approve [License ID]
-If you’d like to approve all pending licenses, use:
+
 aethir license approve --all
-Checker nodes are running automatically. You can verify by using:
+
 aethir license list --working
-or
 
 aethir license summary
+
+Terminalden çıkmadan önce ekranı simge durumuna küçültmek için aşağıdaki klavye tuşuna basın
+
+Ctrl+A+D
+
+
+
+Çalıştırdığımda ödülleri saymıyor gibi görünüyor.
+Test ağı yeni çalışmaya başladı, bu nedenle ekibin bundan haberi olduğunda daha sonraki bir tarihte test ağı için $vATH madenciliği yapılabilir.
+Bunu, hayata geçmeden önce bir deneme çalışması olarak düşünebilirsiniz.
